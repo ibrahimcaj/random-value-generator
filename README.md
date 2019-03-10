@@ -9,17 +9,22 @@ A simple and small repository that can generate random values.
 - randomInteger(len);
 - randomBoolean();
 - randomString(len);
-- randomHash(len);```
+- randomHash(len);
+```
 
 Please note that `len` is the length of your value. It **MUST** be a number.
 
 # Installation
 
-- Install the repository with your terminal using: ```
-npm install random-value-generator```
+- Install the repository with your terminal using:
+```
+npm install random-value-generator
+```
 
-- Define the repository in your code with: ```
-const randomvalue = require("random-value-generator");```
+- Define the repository in your code with:
+```
+const randomvalue = require("random-value-generator");
+```
 
 # Example
 
@@ -48,3 +53,4 @@ console.log(randomString(len));
  * Logs a random hash.
  */
 console.log(randomHash(len));
+```
