@@ -7,8 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "vanishedvan",
-  "license": "MIT",
+  "keywords": [
+    "random",
+    "value",
+    "generator",
+    "generation"
+  ],
   "repository": "https://github.com/vanishedvan/random-value-generator",
+  "license": "MIT",
   "dependencies": {
     "randomatic": "^3.1.1",
     "uuid": "^3.3.2"
