@@ -1,6 +1,6 @@
 {
   "name": "random-value-generator",
-  "version": "0.1.0",
+  "version": "0.0.2",
   "description": "A simple and small repository that can generate random values.",
   "main": "index.js",
   "scripts": {
