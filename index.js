@@ -46,8 +46,6 @@ function randomHash(len) {
   return val.substr(0, len)
 }
 
-console.log(randomHash(7));
-
 module.exports = {
   randomNumber,
   randomInteger,
