@@ -16,12 +16,12 @@ Please note that `len` is the length of your value. It **MUST** be a number.
 
 # Installation
 
-- Install the repository with your terminal using:
+- Install the module with your terminal using:
 ```
 npm install random-value-generator
 ```
 
-- Define the repository in your code with:
+- Define the module in your code with:
 ```
 const randomvalue = require("random-value-generator");
 ```
