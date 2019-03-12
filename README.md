@@ -23,7 +23,7 @@ npm install random-value-generator
 
 - Define the module in your code with:
 ```
-const randomvalue = require("random-value-generator");
+const random = require("random-value-generator");
 ```
 
 # Example
@@ -32,7 +32,7 @@ const randomvalue = require("random-value-generator");
 /**
  * Logs a random number.
  */
-console.log(randomNumber(len));
+console.log(random.randomNumber(len));
 
 /**
  * Logs a random integer.
@@ -54,3 +54,7 @@ console.log(randomString(len));
  */
 console.log(randomHash(len));
 ```
+
+# Other
+
+**NPM**: https://npm.js/package/random-value-generator/
