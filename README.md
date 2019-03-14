@@ -52,7 +52,7 @@ console.log(random.randomBoolean());
 console.log(random.randomString(len));
 
 /**
- * Logs a random hash.
+ * Logs a random string consisting 0-9 and a-f.
  */
 console.log(random.randomHash(len));
 ```
