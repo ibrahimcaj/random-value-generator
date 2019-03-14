@@ -45,7 +45,7 @@ function randomNumber(max) {
  * @return {number} A random integer.
  */
 function randomInteger(max) {
-  return Math.floor(randomNumber());
+  return Math.floor(randomNumber(max));
 }
 
 /**
