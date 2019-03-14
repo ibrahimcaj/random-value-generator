@@ -74,7 +74,7 @@ function randomString(len) {
 function randomHash(len) {
   let val = uuid().replace(/\-/g, '');
   
-  while (val.len < len) {
+  while (val.length < len) {
     val += randomHash()
   }
   return val.substr(0, len)
