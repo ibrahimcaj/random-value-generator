@@ -75,9 +75,9 @@ function randomHash(len) {
   let val = uuid().replace(/\-/g, '');
   
   while (val.length < len) {
-    val += randomHash()
+    val += randomHash();
   }
-  return val.substr(0, len)
+  return val.substr(0, len);
 }
 
 module.exports = {
