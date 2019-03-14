@@ -1,60 +1,62 @@
 # random-value-generator
 
-A simple and small repository that can generate random values.
+[![MIT License](https://img.shields.io/badge/license-MIT-0366d6.svg?longCache=true&style=flat-square)](/LICENSE) [![View package on npm](https://img.shields.io/npm/v/random-value-generator.svg?longCache=true&style=flat-square&logo=npm&color=cb3837)](https://www.npmjs.com/package/random-value-generator) [![Node.js compatibility](https://img.shields.io/node/v/random-value-generator.svg?longCache=true&style=flat-square&logo=node.js&color=026e00)](https://nodejs.org/)
 
-# List of functions
+A simple and small package that can generate random values.
+
+## List of functions
 
 ```
-- randomNumber(len);
-- randomInteger(len);
+- randomNumber(max);
+- randomInteger(max);
 - randomBoolean();
 - randomString(len);
 - randomHash(len);
 ```
 
-Please note that `len` is the length of your value. It **MUST** be a number.
+Please note that `max` is the maximum value of the returned number, and `len` is the length of the returned string. Both kinds of parameters **MUST** be numbers.
 
-# Installation
+## Installation
 
-- Install the module with your terminal using:
+* Install the module with your terminal/console using:
 ```
-npm install random-value-generator
+npm i random-value-generator
 ```
 
-- Define the module in your code with:
+* Define the module in your code with:
 ```
 const random = require("random-value-generator");
 ```
 
-# Example
+## Example
 
 ```
 /**
  * Logs a random number.
  */
-console.log(random.randomNumber(len));
+console.log(random.randomNumber(max));
 
 /**
  * Logs a random integer.
  */
-console.log(randomInteger(len));
+console.log(random.randomInteger(max));
 
 /**
  * Logs a random boolean. - true or false
  */
-console.log(randomBoolean());
+console.log(random.randomBoolean());
 
 /**
  * Logs a random string.
  */
-console.log(randomString(len));
+console.log(random.randomString(len));
 
 /**
  * Logs a random hash.
  */
-console.log(randomHash(len));
+console.log(random.randomHash(len));
 ```
 
-# Other
+## Others
 
-**NPM**: https://npm.js/package/random-value-generator/
+**NPM**: https://www.npmjs.com/package/random-value-generator
