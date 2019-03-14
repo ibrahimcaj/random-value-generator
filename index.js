@@ -25,6 +25,8 @@
  * @author vanished
  */
 
+"use strict";
+
 var randomatic = require('randomatic');
 const uuid = require('uuid');
 
