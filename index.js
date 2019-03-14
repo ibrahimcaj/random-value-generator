@@ -27,7 +27,7 @@
 
 "use strict";
 
-var randomatic = require('randomatic');
+const randomatic = require('randomatic');
 const uuid = require('uuid');
 
 /**
