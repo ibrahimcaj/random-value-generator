@@ -58,11 +58,11 @@ function randomBoolean() {
 
 /**
  * Get a random string.
- * @param {number} len The maximum length of the returned string.
+ * @param {number} len The length of the returned string.
  * @return {string} A random string.
  */
 function randomString(len) {
-  return randomatic('*', Math.floor(Math.random() * len));
+  return randomatic('*', len);
 }
 
 /**
