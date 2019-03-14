@@ -77,7 +77,7 @@ function randomHash(len) {
   while (val.length < len) {
     val += randomHash();
   }
-  return val.substr(0, len);
+  return val.substring(0, len + 1);
 }
 
 module.exports = {
