@@ -31,40 +31,45 @@ const randomatic = require('randomatic');
 const uuid = require('uuid');
 
 /**
- * Returns a random number.
- * @return {Number}
+ * Get a random number.
+ * @param {number} len The maximum value of the returned number.
+ * @return {number} A random number.
  */
 function randomNumber(len) {
   return Math.random() * len;
 }
 
 /**
- * Returns a random integer.
- * @return {Number}
+ * Get a random integer.
+ * @param {number} len The maximum value of the returned integer.
+ * @return {number} A random integer.
  */
 function randomInteger(len) {
   return Math.floor(randomNumber());
 }
 
 /**
- * Returns a random boolean.
- * @return {Boolean}
+ * Get a random boolean.
+ * @return {boolean} Either "true" or "false".
  */
 function randomBoolean() {
   return Boolean(Math.floor(Math.random() * 2));
 }
 
 /**
- * Returns a random string.
- * @return {String}
+ * Get a random string.
+ * @param {number} len The maximum length of the returned string.
+ * @return {string} A random string.
  */
 function randomString(len) {
   return randomatic('*', Math.floor(Math.random() * len));
 }
 
 /**
- * Returns a random hash.
- * @return {String}
+ * Get a random string consisting 0-9 and a-f.
+ * Note: this is not a hashing function despite its name containing the word "hash".
+ * @param {number} len The maximum length of the returned string.
+ * @return {string} A random string consisting 0-9 and a-f.
  */
 function randomHash(len) {
   let val = uuid().replace(/\-/g, '');
