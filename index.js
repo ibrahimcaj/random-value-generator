@@ -53,7 +53,7 @@ function randomInteger(max) {
  * @return {boolean} Either "true" or "false".
  */
 function randomBoolean() {
-  return Boolean(Math.floor(Math.random() * 2));
+  return Math.random() < 0.5;
 }
 
 /**
