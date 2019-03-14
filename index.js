@@ -32,19 +32,19 @@ const uuid = require('uuid');
 
 /**
  * Get a random number.
- * @param {number} len The maximum value of the returned number.
+ * @param {number} max The maximum value of the returned number.
  * @return {number} A random number.
  */
-function randomNumber(len) {
-  return Math.random() * len;
+function randomNumber(max) {
+  return Math.random() * max;
 }
 
 /**
  * Get a random integer.
- * @param {number} len The maximum value of the returned integer.
+ * @param {number} max The maximum value of the returned integer.
  * @return {number} A random integer.
  */
-function randomInteger(len) {
+function randomInteger(max) {
   return Math.floor(randomNumber());
 }
 
