@@ -28,7 +28,7 @@
 "use strict";
 
 const randomatic = require('randomatic');
-const uuid = require('uuid');
+const uuid = require('uuid/v4');
 
 /**
  * Get a random number.
