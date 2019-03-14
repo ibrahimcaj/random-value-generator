@@ -72,12 +72,11 @@ function randomString(len) {
  * @return {string} A random string consisting 0-9 and a-f.
  */
 function randomHash(len) {
-  let val = uuid().replace(/\-/g, '');
-  
-  while (val.length < len) {
-    val += randomHash();
-  }
-  return val.substring(0, len + 1);
+  let string = "";
+  do {
+    string += uuid().replace(/\-/g, '');
+  } while (string.length < len)
+  return string.substring(0, len + 1);
 }
 
 module.exports = {
