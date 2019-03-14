@@ -57,4 +57,4 @@ console.log(randomHash(len));
 
 # Other
 
-**NPM**: https://npm.js/package/random-value-generator/
+**NPM**: https://npmjs.org/package/random-value-generator/
