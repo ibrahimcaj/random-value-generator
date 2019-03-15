@@ -2,7 +2,9 @@
 
 [![MIT License](https://img.shields.io/badge/license-MIT-0366d6.svg?longCache=true&style=flat-square)](/LICENSE) [![View package on npm](https://img.shields.io/npm/v/random-value-generator.svg?longCache=true&style=flat-square&logo=npm&color=cb3837)](https://www.npmjs.com/package/random-value-generator) [![Node.js compatibility](https://img.shields.io/node/v/random-value-generator.svg?longCache=true&style=flat-square&logo=node.js&color=026e00)](https://nodejs.org/)
 
-A simple and small package that can generate random values.
+A simple and small package that can generate random\* values.
+
+\*: This package does NOT provide cryptographically secure random value generation!
 
 ## List of functions
 
