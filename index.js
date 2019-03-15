@@ -31,7 +31,7 @@ const randomatic = require('randomatic');
 const uuid = require('uuid/v4');
 
 /**
- * Get a random number.
+ * Get a random number, where 0 <= number < max.
  * @param {number} max The maximum value of the returned number.
  * @return {number} A random number.
  */
@@ -40,7 +40,7 @@ function randomNumber(max) {
 }
 
 /**
- * Get a random integer.
+ * Get a random integer, where 0 <= number < max.
  * @param {number} max The maximum value of the returned integer.
  * @return {number} A random integer.
  */
@@ -50,14 +50,15 @@ function randomInteger(max) {
 
 /**
  * Get a random boolean.
- * @return {boolean} Either "true" or "false".
+ * @return {boolean} Either "true" or "false", each with about 50% chance.
  */
 function randomBoolean() {
   return Math.random() < 0.5;
 }
 
 /**
- * Get a random string.
+ * Get a random string consisting alphanumeric characters,
+ * and some additional special characters (~!@#$%^&()_+-={}[];\',.).
  * @param {number} len The length of the returned string.
  * @return {string} A random string.
  */
