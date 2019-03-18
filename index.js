@@ -82,6 +82,9 @@ function randomBoolean() {
  * and some additional special characters (~!@#$%^&()_+-={}[];\',.).
  * @param {number} len The length of the returned string.
  * @return {string} A random string.
+ * @throws {TypeError} Argument "len" must be an integer.
+ * @throws {RangeError} Argument "len" must be finite.
+ * @throws {RangeError} Argument "len" must not be negative.
  */
 function randomString(len) {
   if (!Number.isSafeInteger(validateLen(len))) {
