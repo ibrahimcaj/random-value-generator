@@ -98,6 +98,9 @@ function randomString(len) {
  * Note: this is not a hashing function despite its name containing the word "hash".
  * @param {number} len The maximum length of the returned string.
  * @return {string} A random string consisting 0-9 and a-f.
+ * @throws {TypeError} Argument "len" must be an integer.
+ * @throws {RangeError} Argument "len" must be finite.
+ * @throws {RangeError} Argument "len" must not be negative.
  */
 function randomHash(len) {
   if (!Number.isSafeInteger(validateLen(len) + 1)) {
