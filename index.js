@@ -107,15 +107,20 @@ function randomString(len) {
 /**
  * Get a random string consisting 0-9 and a-f.
  * Note: this is not a hashing function despite its name containing the word "hash".
- * @param {number} len The maximum length of the returned string.
+ * @param {number} [len=1] The maximum length of the returned string.
+ * Defaults to 1 if not provided or null.
  * @return {string} A random string consisting 0-9 and a-f.
  * @throws {TypeError} Argument "len" must be an integer.
  * @throws {RangeError} Argument "len" must be finite.
  * @throws {RangeError} Argument "len" must not be negative.
  */
 function randomHash(len) {
-  if (!Number.isSafeInteger(validateLen(len) + 1)) {
-    console.log("len is not a safe integer, precision may be lost");
+  if (len == null) {
+    len = 1;
+  } else {
+    if (!Number.isSafeInteger(validateLen(len) + 1)) {
+      console.log("len is not a safe integer, precision may be lost");
+    }
   }
   let string = "";
   do {
