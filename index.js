@@ -86,15 +86,20 @@ function randomBoolean() {
 /**
  * Get a random string consisting alphanumeric characters,
  * and some additional special characters (~!@#$%^&()_+-={}[];\',.).
- * @param {number} len The length of the returned string.
+ * @param {number} [len=1] The length of the returned string.
+ * Defaults to 1 if not provided or null.
  * @return {string} A random string.
  * @throws {TypeError} Argument "len" must be an integer.
  * @throws {RangeError} Argument "len" must be finite.
  * @throws {RangeError} Argument "len" must not be negative.
  */
 function randomString(len) {
-  if (!Number.isSafeInteger(validateLen(len))) {
-    console.log("len is not a safe integer, precision may be lost");
+  if (len == null) {
+    len = 1;
+  } else {
+    if (!Number.isSafeInteger(validateLen(len))) {
+      console.log("len is not a safe integer, precision may be lost");
+    }
   }
   return randomatic('*', len);
 }
