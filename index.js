@@ -97,6 +97,9 @@ function randomString(len) {
  * @return {string} A random string consisting 0-9 and a-f.
  */
 function randomHash(len) {
+  if (!Number.isSafeInteger(validateLen(len) + 1)) {
+    console.log("len is not a safe integer, precision may be lost");
+  }
   let string = "";
   do {
     string += uuid().replace(/\-/g, '');
