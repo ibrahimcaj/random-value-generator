@@ -1,7 +1,7 @@
 # random-value-generator
 
 <p>
-  <a href="https://discord.gg/3yXx8CN"><img src="https://discordapp.com/api/guilds/519513445721178133/embed.png" alt="discord-server" /></a>
+  <a href="https://discord.gg/QgxZuHk"><img src="https://discordapp.com/api/guilds/519513445721178133/embed.png" alt="discord-server" /></a>
   <a href="https://www.npmjs.com/package/random-value-generator"><img src="https://img.shields.io/npm/v/random-value-generator.svg" alt="npm-version" /></a>
   <a href="https://www.npmjs.com/package/random-value-generator"><img src="https://img.shields.io/npm/dt/random-value-generator.svg" alt="npm-downloads" /></a>
   <a href="https://david-dm.org/random-value-generator"><img src="https://img.shields.io/david/vanishedvan/random-value-generator.svg"
