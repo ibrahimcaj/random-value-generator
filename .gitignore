@@ -4,5 +4,8 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
+# Node.js dependencies
+node_modules/
+
 # NPM configuration file
 .npmrc
