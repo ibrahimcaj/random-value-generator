@@ -84,6 +84,9 @@ function randomBoolean() {
  * @return {string} A random string.
  */
 function randomString(len) {
+  if (!Number.isSafeInteger(validateLen(len))) {
+    console.log("len is not a safe integer, precision may be lost");
+  }
   return randomatic('*', len);
 }
 
