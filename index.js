@@ -130,8 +130,8 @@ function randomHash(len) {
 }
 
 /**
- * @ignore
  * Internal function to validate length.
+ * @ignore
  * @param {} len Length to be validated.
  * @returns {number} Length validated.
  * @throws {TypeError} Argument "len" must be an integer.
