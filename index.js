@@ -55,9 +55,15 @@ function randomNumber(max) {
 }
 
 /**
- * Get a random integer, where 0 <= number < max.
+ * Get a random integer, where:
+ *   0 <= number < max, if max is positive
+ *   0, if max is 0
+ *   max <= number <= 0, if max is negative
  * @param {number} max The maximum value of the returned integer.
  * @return {number} A random integer.
+ * @throws {TypeError} Argument "max" must be a number.
+ * @throws {RangeError} Argument "max" must not be NaN.
+ * @throws {RangeError} Argument "max" must be finite.
  */
 function randomInteger(max) {
   return Math.floor(randomNumber(max));
