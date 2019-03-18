@@ -36,6 +36,15 @@ const uuid = require('uuid/v4');
  * @return {number} A random number.
  */
 function randomNumber(max) {
+  if (typeof max !== "number") {
+    throw new TypeError("max must be a number");
+  } else if (Number.isNaN(max)) {
+    throw new RangeError("max must not be NaN");
+  } else if (!Number.isFinite(max)) {
+    throw new RangeError("max must be finite");
+  } else if (!Number.isSafeInteger(max)) {
+    console.log("max is not a safe integer, precision may be lost");
+  }
   return Math.random() * max;
 }
 
