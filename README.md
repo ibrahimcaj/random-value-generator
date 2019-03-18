@@ -38,7 +38,7 @@ npm install random-value-generator
 const random = require("random-value-generator");
 ```
 
-# Example
+# Examples
 
 ```
 /**
@@ -67,6 +67,7 @@ console.log(randomString(len));
 console.log(randomHash(len));
 ```
 
-# Other
+# Links
 
 **NPM**: https://npmjs.org/package/random-value-generator/
+**Discord**: https://discord.gg/QgxZuHk
