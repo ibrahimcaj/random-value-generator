@@ -101,6 +101,26 @@ function randomHash(len) {
   return string.substring(0, len + 1);
 }
 
+/**
+ * @ignore
+ * Internal function to validate length.
+ * @param {} len Length to be validated.
+ * @returns {number} Length validated.
+ * @throws {TypeError} Argument "len" must be an integer.
+ * @throws {RangeError} Argument "len" must be finite.
+ * @throws {RangeError} Argument "len" must not be negative.
+ */
+function validateLen(len) {
+  if (!Number.isInteger(len)) {
+    throw new TypeError("len must be an integer");
+  } else if (!Number.isFinite(len)) {
+    throw new RangeError("len must be finite");
+  } else if (len < 0) {
+    throw new RangeError("len must be positive");
+  }
+  return len;
+}
+
 module.exports = {
   randomNumber,
   randomInteger,
