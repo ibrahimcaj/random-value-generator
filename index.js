@@ -31,9 +31,15 @@ const randomatic = require('randomatic');
 const uuid = require('uuid/v4');
 
 /**
- * Get a random number, where 0 <= number < max.
+ * Get a random number, where:
+ *   0 <= number < max, if max is positive
+ *   0, if max is 0
+ *   max < number <= 0, if max is negative
  * @param {number} max The maximum value of the returned number.
  * @return {number} A random number.
+ * @throws {TypeError} Argument "max" must be a number.
+ * @throws {RangeError} Argument "max" must not be NaN.
+ * @throws {RangeError} Argument "max" must be finite.
  */
 function randomNumber(max) {
   if (typeof max !== "number") {
