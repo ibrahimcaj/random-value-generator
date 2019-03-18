@@ -1,2 +1,8 @@
-# Test
-test.js
+# Tests
+test/
+
+# Emoji data scraper
+emoji/
+
+# Documentation
+API_DOCS.md
