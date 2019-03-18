@@ -6,7 +6,7 @@
   <a href="https://www.npmjs.com/package/random-value-generator"><img src="https://img.shields.io/npm/dt/random-value-generator.svg" alt="npm-downloads" /></a>
   <a href="https://david-dm.org/random-value-generator"><img src="https://img.shields.io/david/endb/random-value-generator.svg"
       alt="dependencies" /></a>
-  <a href="https://github.com/vanishedvan/random-value-generator"><img src="https://img.shields.io/github/stars/endb/random-value-generator.svg?style=social&label=Star"></a>
+  <a href="https://github.com/vanishedvan/random-value-generator"><img src="https://img.shields.io/github/stars/vanishedvan/random-value-generator.svg?style=social&label=Star"></a>
 </p>
 <p>
   <a href="https://nodei.co/npm/endb/"><img src="https://nodei.co/npm/endb.png?downloads=true&stars=true" alt="npm-info" /></a>
