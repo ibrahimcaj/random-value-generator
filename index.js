@@ -35,21 +35,26 @@ const uuid = require('uuid/v4');
  *   0 <= number < max, if max is positive
  *   0, if max is 0
  *   max < number <= 0, if max is negative
- * @param {number} max The maximum value of the returned number.
+ * @param {number} [max=1] The maximum value of the returned number.
+ * Defaults to 1 if not provided or null.
  * @return {number} A random number.
  * @throws {TypeError} Argument "max" must be a number.
  * @throws {RangeError} Argument "max" must not be NaN.
  * @throws {RangeError} Argument "max" must be finite.
  */
 function randomNumber(max) {
-  if (typeof max !== "number") {
-    throw new TypeError("max must be a number");
-  } else if (Number.isNaN(max)) {
-    throw new RangeError("max must not be NaN");
-  } else if (!Number.isFinite(max)) {
-    throw new RangeError("max must be finite");
-  } else if (!Number.isSafeInteger(max)) {
-    console.log("max is not a safe integer, precision may be lost");
+  if (max == null) {
+    max = 1;
+  } else {
+    if (typeof max !== "number") {
+      throw new TypeError("max must be a number");
+    } else if (Number.isNaN(max)) {
+      throw new RangeError("max must not be NaN");
+    } else if (!Number.isFinite(max)) {
+      throw new RangeError("max must be finite");
+    } else if (!Number.isSafeInteger(max)) {
+      console.log("max is not a safe integer, precision may be lost");
+    }
   }
   return Math.random() * max;
 }
@@ -60,6 +65,7 @@ function randomNumber(max) {
  *   0, if max is 0
  *   max <= number <= 0, if max is negative
  * @param {number} max The maximum value of the returned integer.
+ * Defaults to 1 if not provided or null.
  * @return {number} A random integer.
  * @throws {TypeError} Argument "max" must be a number.
  * @throws {RangeError} Argument "max" must not be NaN.
