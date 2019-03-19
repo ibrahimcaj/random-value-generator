@@ -77,5 +77,5 @@ console.log(random.randomEmoji());
 
 ## Links
 
-**NPM**: https://www.npmjs.com/package/random-value-generator
-**Discord**: https://discord.gg/QgxZuHk
+NPM: https://www.npmjs.com/package/random-value-generator  
+Discord: https://discord.gg/QgxZuHk
