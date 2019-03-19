@@ -29,6 +29,7 @@
 
 const randomatic = require('randomatic');
 const uuid = require('uuid/v4');
+const codePoints = require("./emoji-code-points.json").codePoints;
 
 /**
  * Get a random number, where:
@@ -156,9 +157,7 @@ function validateLen(len) {
  * @return {string} A random emoji.
  */
 function randomEmoji() {
-  var emoji = emojiList[Math.floor(Math.random() * emojiList.length)];
-  
-  return emoji;
+  return String.fromCodePoint(Number.parseInt(codePoints[randomInteger(codePoints.length)], 16));
 }
 
 module.exports = {
