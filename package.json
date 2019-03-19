@@ -4,7 +4,7 @@
   "description": "A simple and small repository that can generate random values.",
   "main": "index.js",
   "scripts": {
-    "test": "ava -v && standard"
+    "test": "node index.js"
   },
   "author": "vanishedvan",
   "keywords": [
