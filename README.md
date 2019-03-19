@@ -71,6 +71,10 @@ console.log(random.randomHash(len));
 console.log(random.randomEmoji());
 ```
 
+## API Documentations
+
+[View the API documentations](/API_DOCS.md).
+
 ## Links
 
 **NPM**: https://www.npmjs.com/package/random-value-generator
