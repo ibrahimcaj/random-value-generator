@@ -20,6 +20,7 @@ A simple and small package that can generate random\* values.
 - randomBoolean();
 - randomString(len);
 - randomHash(len);
+- randomEmoji();
 ```
 
 Please note that `max` is the maximum value of the returned number, and `len` is the length of the returned string. Both kinds of parameters **MUST** be numbers.
@@ -63,6 +64,11 @@ console.log(random.randomString(len));
  * Logs a random string consisting 0-9 and a-f.
  */
 console.log(random.randomHash(len));
+
+/**
+ * Logs a random emoji.
+ */
+console.log(random.randomEmoji());
 ```
 
 ## Links
