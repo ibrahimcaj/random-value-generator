@@ -42,12 +42,13 @@ function randomString(len) {
  * @return {String}
  */
 function randomHash(len) {
-  let val = uuid().replace(/\-/g, '');
-  
-  while (val.len < len) {
-    val += randomHash()
-  }
-  return val.substr(0, len)
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < length; i++)
+    text += possible.charAt(Math.floor(Math.random() * len));
+
+  return text;
 }
 
 /**
