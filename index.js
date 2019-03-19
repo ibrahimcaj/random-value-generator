@@ -150,8 +150,10 @@ function validateLen(len) {
 }
 
 /**
- * Returns a random emoji.
- * @return {String}
+ * Get a random emoji. Despite the attempt to follow Emoji 12.0
+ * standard, the list does not contain all emojis, such as those
+ * created with the use of ZWJs, or those with variation selectors.
+ * @return {string} A random emoji.
  */
 function randomEmoji() {
   var emoji = emojiList[Math.floor(Math.random() * emojiList.length)];
