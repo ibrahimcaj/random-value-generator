@@ -4,7 +4,7 @@
   "description": "A simple and small package that can generate random values.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/test.js"
   },
   "author": {
     "name": "vanishedvan",
