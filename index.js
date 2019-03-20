@@ -100,11 +100,11 @@ function randomString(len) {
 }
 
 /**
- * Get a random string consisting 0-9 and a-f.
+ * Get a random string consisting alphanumeric characters.
  * Note: this is not a hashing function despite its name containing the word "hash".
  * @param {number|Number} [len=1] The length of the returned string.
  * Defaults to 1 if not provided or null.
- * @return {string} A random string consisting 0-9 and a-f.
+ * @return {string} A random string consisting alphanumeric characters.
  * @throws {TypeError} Argument "len" must be an integer.
  * @throws {RangeError} Argument "len" must be finite.
  * @throws {RangeError} Argument "len" must not be negative.
