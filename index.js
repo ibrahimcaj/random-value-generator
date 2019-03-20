@@ -131,6 +131,8 @@ function randomEmoji() {
  * @param {number|Number} [len=1] The length of the returned string.
  * Defaults to 1 if not provided or null.
  * @return {string} A random string.
+ * @throws {TypeError} Argument "pattern" must be a valid
+ * {@link https://github.com/jonschlinkert/randomatic#pattern|pattern of randomatic}.
  * @throws {TypeError} Argument "len" must be an integer.
  * @throws {RangeError} Argument "len" must be finite.
  * @throws {RangeError} Argument "len" must not be negative.
