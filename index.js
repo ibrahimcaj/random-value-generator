@@ -151,6 +151,22 @@ function validateLen(len) {
 }
 
 /**
+ * Unbox Number, Boolean and String objects.
+ * @param {} object The object to be unboxed. If it isn't
+ * an instance of Number, Boolean, or String, the original
+ * object or value is returned.
+ * @returns {} Value of unboxed Numbers, Booleans, or Strings.
+ * The original object or value is returned if it isn't
+ * an instance of Number, Boolean, or String.
+ */
+function unboxIfBoxed(object) {
+  if (object instanceof Number || object instanceof Boolean || object instanceof String) {
+      return object.valueOf();
+  }
+  return object;
+}
+
+/**
  * Get a random emoji. Despite the attempt to follow Emoji 12.0
  * standard, the list does not contain all emojis, such as those
  * created with the use of ZWJs, or those with variation selectors.
