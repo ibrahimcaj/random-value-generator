@@ -163,6 +163,7 @@ function validateLen(len) {
 
 /**
  * Unbox Number, Boolean and String objects.
+ * @ignore
  * @param {} object The object to be unboxed. If it isn't
  * an instance of Number, Boolean, or String, the original
  * object or value is returned.
