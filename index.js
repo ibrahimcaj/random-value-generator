@@ -140,6 +140,17 @@ function randomEmoji() {
   return String.fromCodePoint(Number.parseInt(codePoints[randomInteger(codePoints.length)], 16));
 }
 
+/**
+ * Internal function to get a random string.
+ * @ignore
+ * @param {string} pattern The pattern to use for randomizing.
+ * @param {number|Number} [len=1] The length of the returned string.
+ * Defaults to 1 if not provided or null.
+ * @return {string} A random string.
+ * @throws {TypeError} Argument "len" must be an integer.
+ * @throws {RangeError} Argument "len" must be finite.
+ * @throws {RangeError} Argument "len" must not be negative.
+ */
 function randomStringWithPattern(pattern, len) {
   len = unboxIfBoxed(len);
   if (len == null) {
