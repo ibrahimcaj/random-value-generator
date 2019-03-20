@@ -28,7 +28,6 @@
 "use strict";
 
 const randomatic = require('randomatic');
-const uuid = require('uuid/v4');
 const codePoints = require("./emoji-code-points.json").codePoints;
 
 /**
