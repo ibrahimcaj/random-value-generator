@@ -2,11 +2,11 @@
 
 ## randomNumber([max])
 
-* `max` [&lt;number&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) The maximum value of the returned number. Defaults to `1` if not provided or `null`.
-* Returns: [&lt;number&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) A random number.
-* Throws: [&lt;TypeError&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) Argument `max` must be a number.
-* Throws: [&lt;RangeError&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError) Argument `max` must not be `NaN`.
-* Throws: [&lt;RangeError&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError) Argument `max` must be finite.
+* `max` [&lt;number&gt;][MDN Number Link] | [&lt;Number&gt;][MDN Number Link] The maximum value of the returned number. Defaults to `1` if not provided or `null`.
+* Returns: [&lt;number&gt;][MDN Number Link] A random number.
+* Throws: [&lt;TypeError&gt;][MDN TypeError Link] Argument `max` must be a number.
+* Throws: [&lt;RangeError&gt;][MDN RangeError Link] Argument `max` must not be `NaN`.
+* Throws: [&lt;RangeError&gt;][MDN RangeError Link] Argument `max` must be finite.
 
 Get a random number, where:
 
@@ -16,11 +16,11 @@ Get a random number, where:
 
 ## randomInteger([max])
 
-* `max` [&lt;number&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) The maximum value of the returned integer. Defaults to `1` if not provided or `null`.
-* Returns: [&lt;number&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) A random integer.
-* Throws: [&lt;TypeError&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) Argument `max` must be a number.
-* Throws: [&lt;RangeError&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError) Argument `max` must not be `NaN`.
-* Throws: [&lt;RangeError&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError) Argument `max` must be finite.
+* `max` [&lt;number&gt;][MDN Number Link] | [&lt;Number&gt;][MDN Number Link] The maximum value of the returned integer. Defaults to `1` if not provided or `null`.
+* Returns: [&lt;number&gt;][MDN Number Link] A random integer.
+* Throws: [&lt;TypeError&gt;][MDN TypeError Link] Argument `max` must be a number.
+* Throws: [&lt;RangeError&gt;][MDN RangeError Link] Argument `max` must not be `NaN`.
+* Throws: [&lt;RangeError&gt;][MDN RangeError Link] Argument `max` must be finite.
 
 Get a random integer, where:
 
@@ -36,21 +36,21 @@ Get a random boolean.
 
 ## randomString([len])
 
-* `len` [&lt;number&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) The length of the returned string. Defaults to `1` if not provided or `null`.
-* Returns: [&lt;string&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) A random string.
-* Throws: [&lt;TypeError&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) Argument `len` must be an integer.
-* Throws: [&lt;RangeError&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError) Argument `len` must be finite.
-* Throws: [&lt;RangeError&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError) Argument `len` must not be negative.
+* `len` [&lt;number&gt;][MDN Number Link] | [&lt;Number&gt;][MDN Number Link] The length of the returned string. Defaults to `1` if not provided or `null`.
+* Returns: [&lt;string&gt;][MDN String Link] A random string.
+* Throws: [&lt;TypeError&gt;][MDN TypeError Link] Argument `len` must be an integer.
+* Throws: [&lt;RangeError&gt;][MDN RangeError Link] Argument `len` must be finite.
+* Throws: [&lt;RangeError&gt;][MDN RangeError Link] Argument `len` must not be negative.
 
 Get a random string consisting alphanumeric characters, and some additional special characters (`~!@#$%^&()_+-={}[];\',.`).
 
 ## randomHash([len])
 
-* `len` [&lt;number&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) The length of the returned string. Defaults to `1` if not provided or `null`.
-* Returns: [&lt;string&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) A random string consisting `0-9` and `a-f`.
-* Throws: [&lt;TypeError&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) Argument `len` must be an integer.
-* Throws: [&lt;RangeError&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError) Argument `len` must be finite.
-* Throws: [&lt;RangeError&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError) Argument `len` must not be negative.
+* `len` [&lt;number&gt;][MDN Number Link] | [&lt;Number&gt;][MDN Number Link] The length of the returned string. Defaults to `1` if not provided or `null`.
+* Returns: [&lt;string&gt;][MDN String Link] A random string consisting `0-9` and `a-f`.
+* Throws: [&lt;TypeError&gt;][MDN TypeError Link] Argument `len` must be an integer.
+* Throws: [&lt;RangeError&gt;][MDN RangeError Link] Argument `len` must be finite.
+* Throws: [&lt;RangeError&gt;][MDN RangeError Link] Argument `len` must not be negative.
 
 Get a random string consisting `0-9` and `a-f`.  
 Note: this is not a hashing function despite its name containing the word "hash".
@@ -59,6 +59,11 @@ Note: this is not a hashing function despite its name containing the word "hash"
 
 Added in: v0.2.0
 
-* Returns: [&lt;string&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) A random emoji.
+* Returns: [&lt;string&gt;][MDN String Link] A random emoji.
 
 Get a random emoji. Despite the attempt to follow Emoji 12.0 standard, the list does not contain all emojis, such as those created with the use of ZWJs, or those with variation selectors.
+
+[MDN Number Link]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
+[MDN String Link]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+[MDN TypeError Link]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError
+[MDN RangeError Link]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError
