@@ -131,6 +131,17 @@ function randomHash(len) {
 }
 
 /**
+ * Get a random emoji. Despite the attempt to follow Emoji 12.0
+ * standard, the list does not contain all emojis, such as those
+ * created with the use of ZWJs, or those with variation selectors.
+ * @return {string} A random emoji.
+ * @since 0.2.0
+ */
+function randomEmoji() {
+  return String.fromCodePoint(Number.parseInt(codePoints[randomInteger(codePoints.length)], 16));
+}
+
+/**
  * Internal function to validate length.
  * @ignore
  * @param {} len Length to be validated.
@@ -164,17 +175,6 @@ function unboxIfBoxed(object) {
       return object.valueOf();
   }
   return object;
-}
-
-/**
- * Get a random emoji. Despite the attempt to follow Emoji 12.0
- * standard, the list does not contain all emojis, such as those
- * created with the use of ZWJs, or those with variation selectors.
- * @return {string} A random emoji.
- * @since 0.2.0
- */
-function randomEmoji() {
-  return String.fromCodePoint(Number.parseInt(codePoints[randomInteger(codePoints.length)], 16));
 }
 
 module.exports = {
