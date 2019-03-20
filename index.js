@@ -143,7 +143,7 @@ function randomEmoji() {
 /**
  * Internal function to get a random string.
  * @ignore
- * @param {string} pattern The pattern to use for randomizing.
+ * @param {string|String} pattern The pattern to use for randomizing.
  * @param {number|Number} [len=1] The length of the returned string.
  * Defaults to 1 if not provided or null.
  * @return {string} A random string.
@@ -152,6 +152,7 @@ function randomEmoji() {
  * @throws {RangeError} Argument "len" must not be negative.
  */
 function randomStringWithPattern(pattern, len) {
+  pattern = unboxIfBoxed(pattern);
   len = unboxIfBoxed(len);
   if (len == null) {
     len = 1;
