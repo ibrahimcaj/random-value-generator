@@ -47,12 +47,12 @@ Get a random string consisting alphanumeric characters, and some additional spec
 ## randomHash([len])
 
 * `len` [&lt;number&gt;][MDN Number Link] | [&lt;Number&gt;][MDN Number Link] The length of the returned string. Defaults to `1` if not provided or `null`.
-* Returns: [&lt;string&gt;][MDN String Link] A random string consisting `0-9` and `a-f`.
+* Returns: [&lt;string&gt;][MDN String Link] A random string consisting alphanumeric characters.
 * Throws: [&lt;TypeError&gt;][MDN TypeError Link] Argument `len` must be an integer.
 * Throws: [&lt;RangeError&gt;][MDN RangeError Link] Argument `len` must be finite.
 * Throws: [&lt;RangeError&gt;][MDN RangeError Link] Argument `len` must not be negative.
 
-Get a random string consisting `0-9` and `a-f`.  
+Get a random string consisting alphanumeric characters.  
 Note: this is not a hashing function despite its name containing the word "hash".
 
 ## randomEmoji()
