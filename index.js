@@ -134,6 +134,7 @@ function randomEmoji() {
  * @throws {TypeError} Argument "len" must be an integer.
  * @throws {RangeError} Argument "len" must be finite.
  * @throws {RangeError} Argument "len" must not be negative.
+ * @since 0.2.0
  */
 function randomStringWithPattern(pattern, len) {
   pattern = unboxIfBoxed(pattern);
