@@ -175,7 +175,7 @@ function validateLen(len) {
  */
 function unboxIfBoxed(object) {
   if (object instanceof Number || object instanceof Boolean || object instanceof String) {
-      return object.valueOf();
+    return object.valueOf();
   }
   return object;
 }
