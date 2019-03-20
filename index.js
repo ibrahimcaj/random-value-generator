@@ -44,6 +44,7 @@ const codePoints = require("./emoji-code-points.json").codePoints;
  * @throws {RangeError} Argument "max" must be finite.
  */
 function randomNumber(max) {
+  max = unboxIfBoxed(max);
   if (max == null) {
     max = 1;
   } else {
