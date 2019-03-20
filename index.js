@@ -149,6 +149,7 @@ function randomEmoji() {
  * @throws {TypeError} Argument "len" must be an integer.
  * @throws {RangeError} Argument "len" must be finite.
  * @throws {RangeError} Argument "len" must not be negative.
+ * @since 0.2.0
  */
 function validateLen(len) {
   if (!Number.isInteger(len)) {
@@ -170,6 +171,7 @@ function validateLen(len) {
  * @returns {} Value of unboxed Numbers, Booleans, or Strings.
  * The original object or value is returned if it isn't
  * an instance of Number, Boolean, or String.
+ * @since 0.2.0
  */
 function unboxIfBoxed(object) {
   if (object instanceof Number || object instanceof Boolean || object instanceof String) {
