@@ -96,6 +96,7 @@ function randomBoolean() {
  * @throws {RangeError} Argument "len" must not be negative.
  */
 function randomString(len) {
+  len = unboxIfBoxed(len);
   if (len == null) {
     len = 1;
   } else {
@@ -117,6 +118,7 @@ function randomString(len) {
  * @throws {RangeError} Argument "len" must not be negative.
  */
 function randomHash(len) {
+  len = unboxIfBoxed(len);
   if (len == null) {
     len = 1;
   } else {
