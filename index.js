@@ -122,15 +122,11 @@ function randomHash(len) {
   if (len == null) {
     len = 1;
   } else {
-    if (!Number.isSafeInteger(validateLen(len) + 1)) {
+    if (!Number.isSafeInteger(validateLen(len))) {
       console.log("len is not a safe integer, precision may be lost");
     }
   }
-  let string = "";
-  do {
-    string += uuid().replace(/\-/g, '');
-  } while (string.length < len)
-  return string.substring(0, len + 1);
+  return randomatic("aA0", len);
 }
 
 /**
