@@ -140,6 +140,18 @@ function randomEmoji() {
   return String.fromCodePoint(Number.parseInt(codePoints[randomInteger(codePoints.length)], 16));
 }
 
+function randomStringWithPattern(pattern, len) {
+  len = unboxIfBoxed(len);
+  if (len == null) {
+    len = 1;
+  } else {
+    if (!Number.isSafeInteger(validateLen(len))) {
+      console.log("len is not a safe integer, precision may be lost");
+    }
+  }
+  return randomatic(pattern, len);
+}
+
 /**
  * Internal function to validate length.
  * @ignore
