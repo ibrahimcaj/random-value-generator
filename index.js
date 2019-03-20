@@ -153,6 +153,9 @@ function randomEmoji() {
  */
 function randomStringWithPattern(pattern, len) {
   pattern = unboxIfBoxed(pattern);
+  if (!(typeof pattern === "string" && /[a0!*]/gi.test(pattern))) {
+    throw new TypeError("pattern must be a valid pattern of randomatic");
+  }
   len = unboxIfBoxed(len);
   if (len == null) {
     len = 1;
