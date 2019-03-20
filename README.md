@@ -56,12 +56,12 @@ console.log(random.randomInteger(max));
 console.log(random.randomBoolean());
 
 /**
- * Logs a random string.
+ * Logs a random string consisting alphanumeric and special characters.
  */
 console.log(random.randomString(len));
 
 /**
- * Logs a random string consisting 0-9 and a-f.
+ * Logs a random string consisting alphanumeric characters.
  */
 console.log(random.randomHash(len));
 
