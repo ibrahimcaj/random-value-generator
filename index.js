@@ -36,7 +36,7 @@ const codePoints = require("./emoji-code-points.json").codePoints;
  *   0 <= number < max, if max is positive
  *   0, if max is 0
  *   max < number <= 0, if max is negative
- * @param {number} [max=1] The maximum value of the returned number.
+ * @param {number|Number} [max=1] The maximum value of the returned number.
  * Defaults to 1 if not provided or null.
  * @return {number} A random number.
  * @throws {TypeError} Argument "max" must be a number.
@@ -66,7 +66,7 @@ function randomNumber(max) {
  *   0 <= number < max, if max is positive
  *   0, if max is 0
  *   max <= number <= 0, if max is negative
- * @param {number} [max=1] The maximum value of the returned integer.
+ * @param {number|Number} [max=1] The maximum value of the returned integer.
  * Defaults to 1 if not provided or null.
  * @return {number} A random integer.
  * @throws {TypeError} Argument "max" must be a number.
@@ -88,7 +88,7 @@ function randomBoolean() {
 /**
  * Get a random string consisting alphanumeric characters,
  * and some additional special characters (~!@#$%^&()_+-={}[];\',.).
- * @param {number} [len=1] The length of the returned string.
+ * @param {number|Number} [len=1] The length of the returned string.
  * Defaults to 1 if not provided or null.
  * @return {string} A random string.
  * @throws {TypeError} Argument "len" must be an integer.
@@ -110,7 +110,7 @@ function randomString(len) {
 /**
  * Get a random string consisting 0-9 and a-f.
  * Note: this is not a hashing function despite its name containing the word "hash".
- * @param {number} [len=1] The length of the returned string.
+ * @param {number|Number} [len=1] The length of the returned string.
  * Defaults to 1 if not provided or null.
  * @return {string} A random string consisting 0-9 and a-f.
  * @throws {TypeError} Argument "len" must be an integer.
