@@ -96,15 +96,7 @@ function randomBoolean() {
  * @throws {RangeError} Argument "len" must not be negative.
  */
 function randomString(len) {
-  len = unboxIfBoxed(len);
-  if (len == null) {
-    len = 1;
-  } else {
-    if (!Number.isSafeInteger(validateLen(len))) {
-      console.log("len is not a safe integer, precision may be lost");
-    }
-  }
-  return randomatic('*', len);
+  return randomStringWithPattern("*", len);
 }
 
 /**
@@ -118,15 +110,7 @@ function randomString(len) {
  * @throws {RangeError} Argument "len" must not be negative.
  */
 function randomHash(len) {
-  len = unboxIfBoxed(len);
-  if (len == null) {
-    len = 1;
-  } else {
-    if (!Number.isSafeInteger(validateLen(len))) {
-      console.log("len is not a safe integer, precision may be lost");
-    }
-  }
-  return randomatic("aA0", len);
+  return randomStringWithPattern("aA0", len);
 }
 
 /**
