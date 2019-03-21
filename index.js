@@ -98,7 +98,7 @@ function randomBoolean() {
  * @throws {RangeError} Argument "len" must not be negative.
  */
 function randomString(len) {
-  return randomStringWithPattern("*", len);
+  return randomStringFromCharacters(alphanumericsSpecial, len);
 }
 
 /**
@@ -112,7 +112,7 @@ function randomString(len) {
  * @throws {RangeError} Argument "len" must not be negative.
  */
 function randomHash(len) {
-  return randomStringWithPattern("aA0", len);
+  return randomStringFromCharacters(alphanumerics, len);
 }
 
 /**
