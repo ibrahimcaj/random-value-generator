@@ -30,6 +30,9 @@
 const randomatic = require('randomatic');
 const codePoints = require("./emoji-code-points.json").codePoints;
 
+const alphanumerics = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+const alphanumericsSpecial = `${alphanumerics}~!@#$%^&()_+-={}[];',.`;
+
 /**
  * Get a random number, where:
  *   0 <= number < max, if max is positive
