@@ -73,7 +73,7 @@ function randomNumber(max) {
  * @throws {RangeError} Argument "max" must be finite.
  */
 function randomInteger(max) {
-  return Math.floor(randomNumber(max));
+  return Math.floor(randomNumber(max == null ? 2 : max));
 }
 
 /**
