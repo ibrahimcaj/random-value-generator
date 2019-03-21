@@ -25,11 +25,35 @@
  * @author vanished
  */
 
+/**
+ * Use strict mode.
+ */
 "use strict";
 
+/**
+ * Code points of a list of emojis.
+ * @ignore
+ * @constant {object}
+ * @readonly
+ */
 const codePoints = require("./emoji-code-points.json").codePoints;
 
+/**
+ * A string of characters for use with {@link randomHash}.
+ * @ignore
+ * @constant {string}
+ * @default
+ * @readonly
+ */
 const alphanumerics = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+/**
+ * A string of characters for use with {@link randomString}.
+ * @ignore
+ * @constant {string}
+ * @default
+ * @readonly
+ */
 const alphanumericsSpecial = `${alphanumerics}~!@#$%^&()_+-={}[];',.`;
 
 /**
@@ -198,6 +222,18 @@ function unboxIfBoxed(object) {
   return object;
 }
 
+/**
+ * An object of exported functions.
+ * @ignore
+ * @constant {object}
+ * @property {function} randomNumber {@link randomNumber}
+ * @property {function} randomInteger {@link randomInteger}
+ * @property {function} randomBoolean {@link randomBoolean}
+ * @property {function} randomString {@link randomString}
+ * @property {function} randomHash {@link randomHash}
+ * @property {function} randomEmoji {@link randomEmoji}
+ * @readonly
+ */
 module.exports = {
   randomNumber,
   randomInteger,
