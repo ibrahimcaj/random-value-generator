@@ -16,7 +16,7 @@ Get a random number, where:
 
 ## randomInteger([max])
 
-* `max` [&lt;number&gt;][MDN Number Link] | [&lt;Number&gt;][MDN Number Link] The maximum value of the returned integer. Defaults to `2` if not provided or `null`.
+* `max` [&lt;number&gt;][MDN Number Link] | [&lt;Number&gt;][MDN Number Link] The maximum value of the returned integer. Defaults to `1` if not provided or `null`.
 * Returns: [&lt;number&gt;][MDN Number Link] A random integer.
 * Throws: [&lt;TypeError&gt;][MDN TypeError Link] Argument `max` must be a number.
 * Throws: [&lt;RangeError&gt;][MDN RangeError Link] Argument `max` must not be `NaN`.
