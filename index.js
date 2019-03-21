@@ -88,7 +88,7 @@ function randomNumber(max) {
 
 /**
  * Get a random integer, where:
- *   0 <= number < max, if max is positive
+ *   0 <= number <= max, if max is positive
  *   0, if max is 0
  *   max <= number <= 0, if max is negative
  * @param {number|Number} [max=2] The maximum value of the returned integer.
