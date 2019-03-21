@@ -156,6 +156,20 @@ function randomStringWithPattern(pattern, len) {
   return randomatic(pattern, len);
 }
 
+/**
+ * Internal function to get a random string.
+ * @ignore
+ * @param {string|String} characters A string of characters
+ * to randomly get characters from.
+ * @param {number|Number} [len=1] The length of the returned string.
+ * Defaults to 1 if not provided or null.
+ * @return {string} A random string.
+ * @throws {TypeError} Argument "characters" must be a string.
+ * @throws {TypeError} Argument "len" must be an integer.
+ * @throws {RangeError} Argument "len" must be finite.
+ * @throws {RangeError} Argument "len" must not be negative.
+ * @since 0.2.0
+ */
 function randomStringFromCharacters(characters, len) {
   characters = unboxIfBoxed(characters);
   if (typeof characters !== "string") {
