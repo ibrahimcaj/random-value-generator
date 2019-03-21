@@ -42,7 +42,7 @@ Get a random boolean.
 * Throws: [&lt;RangeError&gt;][MDN RangeError Link] Argument `len` must be finite.
 * Throws: [&lt;RangeError&gt;][MDN RangeError Link] Argument `len` must not be negative.
 
-Get a random string consisting alphanumeric characters, and some additional special characters (`~!@#$%^&()_+-={}[];\',.`).
+Get a random string consisting alphanumeric characters, and some additional special characters (`~!@#$%^&()_+-={}[];',.`).
 
 ## randomHash([len])
 

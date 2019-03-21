@@ -89,7 +89,7 @@ function randomBoolean() {
 
 /**
  * Get a random string consisting alphanumeric characters,
- * and some additional special characters (~!@#$%^&()_+-={}[];\',.).
+ * and some additional special characters (~!@#$%^&()_+-={}[];',.).
  * @param {number|Number} [len=1] The length of the returned string.
  * Defaults to 1 if not provided or null.
  * @return {string} A random string.
