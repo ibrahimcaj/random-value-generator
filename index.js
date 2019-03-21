@@ -27,7 +27,6 @@
 
 "use strict";
 
-const randomatic = require('randomatic');
 const codePoints = require("./emoji-code-points.json").codePoints;
 
 const alphanumerics = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
