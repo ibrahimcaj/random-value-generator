@@ -129,36 +129,6 @@ function randomEmoji() {
 /**
  * Internal function to get a random string.
  * @ignore
- * @param {string|String} pattern The pattern to use for randomizing.
- * @param {number|Number} [len=1] The length of the returned string.
- * Defaults to 1 if not provided or null.
- * @return {string} A random string.
- * @throws {TypeError} Argument "pattern" must be a valid
- * {@link https://github.com/jonschlinkert/randomatic#pattern|pattern of randomatic}.
- * @throws {TypeError} Argument "len" must be an integer.
- * @throws {RangeError} Argument "len" must be finite.
- * @throws {RangeError} Argument "len" must not be negative.
- * @since 0.2.0
- */
-function randomStringWithPattern(pattern, len) {
-  pattern = unboxIfBoxed(pattern);
-  if (!(typeof pattern === "string" && /[a0!*]/gi.test(pattern))) {
-    throw new TypeError("pattern must be a valid pattern of randomatic");
-  }
-  len = unboxIfBoxed(len);
-  if (len == null) {
-    len = 1;
-  } else {
-    if (!Number.isSafeInteger(validateLen(len))) {
-      console.log("len is not a safe integer, precision may be lost");
-    }
-  }
-  return randomatic(pattern, len);
-}
-
-/**
- * Internal function to get a random string.
- * @ignore
  * @param {string|String} characters A string of characters
  * to randomly get characters from.
  * @param {number|Number} [len=1] The length of the returned string.
