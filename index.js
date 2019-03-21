@@ -153,6 +153,26 @@ function randomStringWithPattern(pattern, len) {
   return randomatic(pattern, len);
 }
 
+function randomStringFromCharacters(characters, len) {
+  characters = unboxIfBoxed(characters);
+  if (typeof characters !== "string") {
+    throw new TypeError("characters must be a string");
+  }
+  len = unboxIfBoxed(len);
+  if (len == null) {
+    len = 1;
+  } else {
+    if (!Number.isSafeInteger(validateLen(len))) {
+      console.log("len is not a safe integer, precision may be lost");
+    }
+  }
+  let string = "";
+  for (let i = 0; i < len; i++) {
+    string += characters.charAt(randomInteger(characters.length));
+  }
+  return string;
+}
+
 /**
  * Internal function to validate length.
  * @ignore
