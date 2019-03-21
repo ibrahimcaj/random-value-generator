@@ -2,14 +2,6 @@
   "name": "random-value-generator",
   "version": "0.1.2",
   "description": "A simple and small package that can generate random values.",
-  "main": "index.js",
-  "scripts": {
-    "test": "node test/test.js"
-  },
-  "author": {
-    "name": "vanishedvan",
-    "url": "https://github.com/vanishedvan"
-  },
   "keywords": [
     "random",
     "value",
@@ -17,14 +9,32 @@
     "generation"
   ],
   "homepage": "https://github.com/vanishedvan/random-value-generator",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vanishedvan/random-value-generator.git"
-  },
   "bugs": {
     "url": "https://github.com/vanishedvan/random-value-generator/issues"
   },
   "license": "MIT",
+  "author": {
+    "name": "vanishedvan",
+    "url": "https://github.com/vanishedvan"
+  },
+  "contributors": [
+    {
+      "name": "LightWayUp",
+      "email": "lightwayuplightwayup@gmail.com",
+      "url": "https://lightwayup.github.io/"
+    }
+  ],
+  "main": "index.js",
+  "directories": {
+    "test": "./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vanishedvan/random-value-generator.git"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
   "engines": {
     "node": ">=6.0.0"
   }
