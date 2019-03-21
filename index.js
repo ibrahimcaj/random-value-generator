@@ -79,7 +79,7 @@ function randomNumber(max) {
       throw new RangeError("max must not be NaN");
     } else if (!Number.isFinite(max)) {
       throw new RangeError("max must be finite");
-    } else if (!Number.isSafeInteger(max)) {
+    } else if (Number.isInteger(max) && !Number.isSafeInteger(max)) {
       console.log("max is not a safe integer, precision may be lost");
     }
   }
