@@ -35,6 +35,7 @@
  * @ignore
  * @constant {object}
  * @readonly
+ * @since 0.2.0
  */
 const codePoints = require("./emoji-code-points.json").codePoints;
 
@@ -44,6 +45,7 @@ const codePoints = require("./emoji-code-points.json").codePoints;
  * @constant {string}
  * @default
  * @readonly
+ * @since 0.2.0
  */
 const alphanumerics = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
@@ -53,6 +55,7 @@ const alphanumerics = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
  * @constant {string}
  * @default
  * @readonly
+ * @since 0.2.0
  */
 const alphanumericsSpecial = `${alphanumerics}~!@#$%^&()_+-={}[];',.`;
 
