@@ -94,8 +94,8 @@ function randomNumber(max) {
  *   0 <= number <= max, if max is positive
  *   0, if max is 0
  *   max <= number <= 0, if max is negative
- * @param {number|Number} [max=1] The maximum value of the returned integer.
- * Defaults to 1 if not provided or null.
+ * @param {number|Number} [max=2] The maximum value of the returned integer.
+ * Defaults to 2 if not provided or null.
  * @return {number} A random integer.
  * @throws {TypeError} Argument "max" must be a number.
  * @throws {RangeError} Argument "max" must not be NaN.
