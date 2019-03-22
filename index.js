@@ -102,7 +102,8 @@ function randomNumber(max) {
  * @throws {RangeError} Argument "max" must be finite.
  */
 function randomInteger(max) {
-  return Math.round(randomNumber(max));
+  const number = randomNumber(max);
+  return (number < 0 ? Math.ceil : Math.floor)(number);
 }
 
 /**
