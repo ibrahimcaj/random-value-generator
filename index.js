@@ -121,6 +121,7 @@ function randomBoolean() {
  * Defaults to 1 if not provided or null.
  * @return {string} A random string.
  * @throws {TypeError} Argument "len" must be an integer.
+ * @throws {RangeError} Argument "len" must not be NaN.
  * @throws {RangeError} Argument "len" must be finite.
  * @throws {RangeError} Argument "len" must not be negative.
  */
@@ -135,6 +136,7 @@ function randomString(len) {
  * Defaults to 1 if not provided or null.
  * @return {string} A random string consisting alphanumeric characters.
  * @throws {TypeError} Argument "len" must be an integer.
+ * @throws {RangeError} Argument "len" must not be NaN.
  * @throws {RangeError} Argument "len" must be finite.
  * @throws {RangeError} Argument "len" must not be negative.
  */
@@ -163,6 +165,7 @@ function randomEmoji() {
  * @return {string} A random string.
  * @throws {TypeError} Argument "characters" must be a string.
  * @throws {TypeError} Argument "len" must be an integer.
+ * @throws {RangeError} Argument "len" must not be NaN.
  * @throws {RangeError} Argument "len" must be finite.
  * @throws {RangeError} Argument "len" must not be negative.
  * @since 0.2.0
@@ -193,6 +196,7 @@ function randomStringFromCharacters(characters, len) {
  * @param {} len Length to be validated.
  * @returns {number} Length validated.
  * @throws {TypeError} Argument "len" must be an integer.
+ * @throws {RangeError} Argument "len" must not be NaN.
  * @throws {RangeError} Argument "len" must be finite.
  * @throws {RangeError} Argument "len" must not be negative.
  * @since 0.2.0
