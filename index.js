@@ -198,10 +198,14 @@ function randomStringFromCharacters(characters, len) {
  * @since 0.2.0
  */
 function validateLen(len) {
-  if (!Number.isInteger(len)) {
+  if (typeof len !== "number") {
     throw new TypeError("len must be an integer");
-  } else if (!Number.isFinite(len)) {
-    throw new RangeError("len must be finite");
+  } else if (Number.isNaN(max)) {
+    throw new RangeError("max must not be NaN");
+  } else if (!Number.isFinite(max)) {
+    throw new RangeError("max must be finite");
+  } else if (!Number.isInteger(len)) {
+    throw new TypeError("len must be an integer");
   } else if (len < 0) {
     throw new RangeError("len must be positive");
   }
