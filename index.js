@@ -149,7 +149,7 @@ function randomHash(len) {
  * standard, the list does not contain all emojis, such as those
  * created with the use of ZWJs, or those with variation selectors.
  * @return {string} A random emoji.
- * @since 0.2.0
+ * @since 0.1.3
  */
 function randomEmoji() {
   return String.fromCodePoint(Number.parseInt(codePoints[randomInteger(codePoints.length)], 16));

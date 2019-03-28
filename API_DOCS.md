@@ -59,7 +59,7 @@ Note: this is not a hashing function despite its name containing the word "hash"
 
 ## randomEmoji()
 
-Added in: v0.2.0
+Added in: v0.1.3
 
 * Returns: [&lt;string&gt;][MDN String Link] A random emoji.
 
