@@ -152,7 +152,7 @@ function randomHash(len) {
  * @since 0.1.3
  */
 function randomEmoji() {
-  return String.fromCodePoint(Number.parseInt(codePoints[randomInteger(codePoints.length)], 16));
+  return String.fromCodePoint(Number(`0x${codePoints[randomInteger(codePoints.length)]}`));
 }
 
 /**
