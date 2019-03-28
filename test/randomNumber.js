@@ -37,7 +37,7 @@ function run(random, assert, loop) {
 
     printProgress();
 
-    assert.deepStrictEqual(typeof random.randomNumber(), "number");
+    assert(Number.isFinite(random.randomNumber()));
 
     printProgress();
 
