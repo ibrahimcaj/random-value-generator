@@ -1,4 +1,4 @@
-# random-value-generator
+# [random-value-generator](https://www.npmjs.com/package/random-value-generator)
 
 ## Badges
 
