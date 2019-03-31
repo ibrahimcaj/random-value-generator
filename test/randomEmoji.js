@@ -30,7 +30,7 @@
 let testsProgress = 1;
 
 function printProgress() {
-    console.log(`Running test ${testsProgress++} of 1 of randomEmoji`);
+    console.log(`Running test ${testsProgress++} of 2 of randomEmoji`);
 }
 
 function run(random, assert) {
@@ -38,6 +38,10 @@ function run(random, assert) {
     printProgress();
 
     assert.deepStrictEqual(typeof random.randomEmoji(), "string");
+
+    printProgress();
+
+    assert(random.randomEmoji().length >= 1);
 }
 
 module.exports = {
