@@ -152,7 +152,8 @@ function randomHash(len) {
  * @since 0.1.3
  */
 function randomEmoji() {
-  return String.fromCodePoint(Number(`0x${codePoints[randomInteger(codePoints.length)]}`));
+  return codePoints[randomInteger(codePoints.length)].split(/\s/gi)
+    .map(codePointSingle => String.fromCodePoint(Number(`0x${codePointSingle}`))).join("");
 }
 
 /**
