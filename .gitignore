@@ -9,3 +9,8 @@ node_modules/
 
 # NPM configuration file
 .npmrc
+
+# Emoji data
+emoji/emoji-data.txt
+emoji/emoji-sequences.txt
+emoji/emoji-zwj-sequences.txt
