@@ -33,7 +33,8 @@
     "url": "https://github.com/vanishedvan/random-value-generator.git"
   },
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "generate-emojis": "node emoji/generate.js"
   },
   "engines": {
     "node": ">=6.0.0"
