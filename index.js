@@ -145,10 +145,9 @@ function randomHash(len) {
 }
 
 /**
- * Get a random emoji. Despite the attempt to follow Emoji 12.0
- * standard, the list does not contain all emojis, such as those
- * created with the use of ZWJs, or those with variation selectors.
- * @return {string} A random emoji.
+ * Get a random emoji. Some emojis might not display
+ * correctly on certain platforms, especially those
+ * that don't implement Unicode Standard 12.0.0.
  * @since 0.1.3
  */
 function randomEmoji() {
