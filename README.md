@@ -39,6 +39,8 @@ const random = require("random-value-generator");
 
 ## Examples
 
+[Try the online demo](https://lightwayup.github.io/random-value-generator/).
+
 ```
 /**
  * Logs a random number.
@@ -80,9 +82,8 @@ console.log(random.randomEmoji());
 NPM: https://www.npmjs.com/package/random-value-generator  
 Discord: https://discord.gg/QgxZuHk
 
-[NPM Package]: https://www.npmjs.com/package/random-value-generator
-
 ## License
+
 This project is licensed under [MIT License](/LICENSE).
 
 > Copyright (c) 2019 vanished
@@ -104,3 +105,5 @@ This project is licensed under [MIT License](/LICENSE).
 > LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 > OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 > SOFTWARE.
+
+[NPM Package]: https://www.npmjs.com/package/random-value-generator
