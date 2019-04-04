@@ -84,7 +84,7 @@ class EmojiScraper {
             return codePointsSet;
         }
 
-        const regexDefaultExclusions = "(zero width joiner)|(VARIATION SELECTOR-16)|(tag space..cancel tag)";
+        const regexDefaultExclusions = "(zero\\swidth\\sjoiner)|(VARIATION\\sSELECTOR-16)|(tag\\sspace..cancel\\stag)";
 
         this.getFilteredLines().forEach(line => {
 
