@@ -46,10 +46,15 @@ Alternatively, script utilizing ES Module can be used:
 npm i random-value-generator
 ```
 
-* Define the module in your code with:
-```
-const random = require("random-value-generator");
-```
+* Defining the module in your code:
+  * CommonJS:
+    ```
+    const random = require("random-value-generator");
+    ```
+  * ES:
+    ```
+    import random from "random-value-generator/index.mjs";
+    ```
 
 ## Examples
 
