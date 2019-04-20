@@ -25,6 +25,7 @@
     }
   ],
   "main": "index.js",
+  "browser": "browser.js",
   "directories": {
     "test": "./test"
   },
