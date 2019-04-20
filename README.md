@@ -25,6 +25,20 @@ A simple, zero-dependency package that can generate random\* values.
 
 Please note that `max` is the maximum value of the returned number, and `len` is the length of the returned string. Both kinds of parameters **MUST** be numbers.
 
+## For the Web
+
+[UNPKG](https://unpkg.com/) can be used as CDN to deliver the script.
+
+Loading the script:
+```
+<script src="http://unpkg.com/random-value-generator/browser.js"></script>
+```
+
+Alternatively, script utilizing ES Module can be used:
+```
+<script type="module" src="http://unpkg.com/random-value-generator/index.mjs"></script>
+```
+
 ## Installation
 
 * Install the module with your terminal/console using:
