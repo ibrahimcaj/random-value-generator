@@ -19,6 +19,7 @@
 * Removed dependency `randomatic` and `uuid`
 
 Other changes:
+
 * Added `.gitignore`
 * Added `.npmignore`
 * Updated `travis.yml` to set Node.js versions for test runs
@@ -34,6 +35,7 @@ Other changes:
 * Added homepage, bugs, contributors, browser, directories, and engines field in `package.json`
 * Added scripts for building in `package.json`
 * Added tests
+* Other miscellaneous changes
 
 ## 0.1.3
 
@@ -41,6 +43,7 @@ Other changes:
 * Changed `randomHash(len)` behavior to always return a zero-length string
 
 Other changes:
+
 * Started utilizing Travis CI in development phase
 * Prepared for code testing
 * Updated `README.md`
@@ -62,6 +65,7 @@ No changes.
 * Removed accidental debug logging in `index.js`
 
 Other changes:
+
 * Added keywords field in `package.json`
 * Updated description, author, license, and repository field in `package.json`
 * Added more content to `README.md`
@@ -69,4 +73,4 @@ Other changes:
 
 ## 0.0.1
 
-Initial release.
+Initial release: Added function `randomNumber(max)`, `randomInteger(max)`, `randomBoolean()`, `randomString(max)`, and `randomHash(max)`

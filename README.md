@@ -41,20 +41,21 @@ Alternatively, script utilizing ES Module can be used:
 
 ## Installation
 
-* Install the module with your terminal/console using:
+Install the module with your terminal/console using:
 ```
 npm i random-value-generator
 ```
 
-* Defining the module in your code:
-  * CommonJS:
-    ```
-    const random = require("random-value-generator");
-    ```
-  * ES:
-    ```
-    import random from "random-value-generator/index.mjs";
-    ```
+Defining the module in your code:
+
+* CommonJS:
+  ```
+  const random = require("random-value-generator");
+  ```
+* ES:
+  ```
+  import random from "random-value-generator/index.mjs";
+  ```
 
 ## Examples
 

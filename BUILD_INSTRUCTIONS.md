@@ -1,10 +1,11 @@
 # Build Instructions
 
 There are several files that can be built:
-* [index.js](/index.js)
-* [index.mjs](index.mjs)
-* [browser.js](/browser.js)
-* [emoji-code-points.json](/emoji-code-points.json)
+
+* [`index.js`](/index.js)
+* [`index.mjs`](index.mjs)
+* [`browser.js`](/browser.js)
+* [`emoji-code-points.json`](/emoji-code-points.json)
 
 ## Commandline options
 
@@ -27,6 +28,6 @@ The commands/options/flags **are case sensitive**.
 
 ## Notes
 
-* The source is [base.js](/base.js), and modifications to it will be reflected when the next build happens.
+* The source is [`base.js`](/base.js), and modifications to it will be reflected when the next build happens.
 * All of the files are always rebuilt before test runs.
-* The required data [emoji-data.txt](https://www.unicode.org/Public/emoji/12.0/emoji-data.txt), [emoji-sequences.txt](https://www.unicode.org/Public/emoji/12.0/emoji-sequences.txt), and [emoji-zwj-sequences.txt](https://www.unicode.org/Public/emoji/12.0/emoji-zwj-sequences.txt) for building are automatically downloaded if they aren't in the `build-scripts/` folder.
+* The required data [`emoji-data.txt`](https://www.unicode.org/Public/emoji/12.0/emoji-data.txt), [`emoji-sequences.txt`](https://www.unicode.org/Public/emoji/12.0/emoji-sequences.txt), and [`emoji-zwj-sequences.txt`](https://www.unicode.org/Public/emoji/12.0/emoji-zwj-sequences.txt) for building are automatically downloaded if they aren't in the `build-scripts/` folder.
