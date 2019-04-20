@@ -11,6 +11,7 @@
 * Fixed an issue where `randomInteger(max)` always returns `NaN`
 * Changed `randomInteger(max)` behavior; if `max` is negative, the returned integer will now always be greater than and not equal to `max`
 * Optimized `randomBoolean()`
+* Fixed an issue where `randomString(len)` always returns a string shorter than `len` characters long as long as `len` is not `0`
 * Added default `len` for `randomHash(len)` to be `1`
 * Fixed an issue where `randomHash(len)` always returns a zero-length string, now it returns a string containing `A-Z`, `a-z`, and `0-9` as long as `len` is not `0`
 * Made function `randomNumber(max)`, `randomInteger(max)`, `randomString(len)`, and `randomHash(len)` accept boxed/wrapper type parameters
