@@ -37,7 +37,7 @@
  * @readonly
  * @since 0.2.0
  */
-const codePoints = require("./emoji-code-points.json").codePoints;
+/* Code points insertion */
 
 /**
  * A string of characters for use with {@link randomHash}.
@@ -147,7 +147,7 @@ function randomHash(len) {
 /**
  * Get a random emoji. Some emojis might not display
  * correctly on certain platforms, especially those
- * that don't implement Unicode Standard 12.0.0.
+ * that don't implement Emoji 12.0 standard.
  * @since 0.1.3
  */
 function randomEmoji() {
@@ -246,11 +246,4 @@ function unboxIfBoxed(object) {
  * @property {function} randomEmoji {@link randomEmoji}
  * @readonly
  */
-module.exports = {
-  randomNumber,
-  randomInteger,
-  randomBoolean,
-  randomString,
-  randomHash,
-  randomEmoji
-};
+/* Exports insertion */
