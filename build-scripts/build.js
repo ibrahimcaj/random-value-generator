@@ -65,9 +65,8 @@ const commands = [
     new Command(force => generate(TargetFile.MJS, generateMjs, force), "m", "mjs", "es-module"),
     new Command(force => generate(TargetFile.EMOJI, generateEmoji, force), "e", "emoji", "emojis", "code-point", "code-points")
 ];
-const ranCommands = CommandList.getCommandList(...commands).runCommands(process.argv, FORCE);
 
-if (!ranCommands) {
+if (!CommandList.getCommandList(...commands).runCommands(process.argv, FORCE)) {
     commands.forEach(command => command.run(FORCE));
 }
 
