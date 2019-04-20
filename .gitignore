@@ -7,8 +7,9 @@ Desktop.ini
 # Node.js dependencies
 node_modules/
 
-# NPM configuration file
+# npm
 .npmrc
+package-lock.json
 
 # Emoji data
 emoji/emoji-data.txt
