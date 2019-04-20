@@ -8,7 +8,7 @@
 
 ## Introduction
 
-A simple, small, zero-dependency package that can generate random\* values.
+A simple, zero-dependency package that can generate random\* values.
 
 \*: This package does NOT provide cryptographically secure random value generation!
 
