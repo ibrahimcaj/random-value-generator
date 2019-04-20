@@ -40,7 +40,7 @@
     "generate-node": "npm run build -- -n",
     "generate-browser": "npm run build -- -b",
     "generate-mjs": "npm run build -- -m",
-    "generate-emojis": "npm run build -- -e"
+    "generate-emoji": "npm run build -- -e"
   },
   "engines": {
     "node": ">=6.0.0"
