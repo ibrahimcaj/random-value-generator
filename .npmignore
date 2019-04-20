@@ -1,8 +1,11 @@
 # Tests
 test/
 
-# Emoji data scraper
-emoji/
+# Base source file
+base.js
+
+# Package build scripts
+build-scripts/
 
 # Documentation
 API_DOCS.md
