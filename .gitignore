@@ -12,6 +12,6 @@ node_modules/
 package-lock.json
 
 # Emoji data
-emoji/emoji-data.txt
-emoji/emoji-sequences.txt
-emoji/emoji-zwj-sequences.txt
+build-scripts/emoji-data.txt
+build-scripts/emoji-sequences.txt
+build-scripts/emoji-zwj-sequences.txt
