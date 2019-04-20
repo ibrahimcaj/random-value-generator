@@ -26,7 +26,7 @@
  */
 
 /**
- * Unicode 12.0 Emoji standard:
+ * Emoji 12.0 standard:
  * https://www.unicode.org/Public/emoji/12.0/
  * 
  * Files applicable for scraping:
@@ -39,6 +39,7 @@
 
 const fs = require("fs");
 const url = require("url");
+const {unboxIfBoxed} = require("../build-scripts/utilities.js");
 
 class EmojiScraper {
 
@@ -118,13 +119,6 @@ class EmojiScraper {
 
         return codePointsSet;
     }
-}
-
-function unboxIfBoxed(object) {
-    if (object instanceof Number || object instanceof Boolean || object instanceof String) {
-        return object.valueOf();
-    }
-    return object;
 }
 
 module.exports = EmojiScraper;
