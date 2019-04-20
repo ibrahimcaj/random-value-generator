@@ -6,7 +6,7 @@ Coming soon...
 
 ## 0.1.3
 
-* Added function [`randomEmoji()`](/API_DOCS.md#randomEmoji())
+* Added function [`randomEmoji()`](/API_DOCS.md#randomemoji)
 * Started utilizing Travis CI in development phase
 * Changed `randomHash()` behavior; in addition to `0-9` and `a-f`, the returned string can now contain `g-z` and `A-Z`
 * Updated README.md
