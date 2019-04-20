@@ -101,6 +101,10 @@ console.log(random.randomEmoji());
 NPM: https://www.npmjs.com/package/random-value-generator  
 Discord: https://discord.gg/QgxZuHk
 
+## Building from Source
+
+[See the build instructions](/BUILD_INSTRUCTIONS.md).
+
 ## License
 
 This project is licensed under [MIT License](/LICENSE).
