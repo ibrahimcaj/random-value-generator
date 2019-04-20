@@ -94,16 +94,20 @@ console.log(random.randomEmoji());
 
 ## API Documentations
 
-[View the API documentations](/API_DOCS.md).
+[View API documentations](/API_DOCS.md).
+
+## Changelog
+
+[View changelog](/CHANGELOG.md).
+
+## Building from Source
+
+[View build instructions](/BUILD_INSTRUCTIONS.md).
 
 ## Links
 
 NPM: https://www.npmjs.com/package/random-value-generator  
 Discord: https://discord.gg/QgxZuHk
-
-## Building from Source
-
-[See the build instructions](/BUILD_INSTRUCTIONS.md).
 
 ## License
 
