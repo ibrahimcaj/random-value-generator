@@ -63,7 +63,7 @@ Added in: v0.1.3
 
 * Returns: [&lt;string&gt;][MDN String Link] A random emoji.
 
-Get a random emoji. Some emojis might not display correctly on certain platforms, especially those that don't implement Unicode Standard 12.0.0.
+Get a random emoji. Some emojis might not display correctly on certain platforms, especially those that don't implement Emoji 12.0 standard.
 
 [MDN Number Link]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
 [MDN String Link]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
