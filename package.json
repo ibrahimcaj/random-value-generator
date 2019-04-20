@@ -1,6 +1,6 @@
 {
   "name": "random-value-generator",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A simple and small package that can generate random values.",
   "keywords": [
     "random",
