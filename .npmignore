@@ -7,5 +7,8 @@ base.js
 # Package build scripts
 build-scripts/
 
+# Travis configuration
+.travis.yml
+
 # Documentation
 API_DOCS.md
