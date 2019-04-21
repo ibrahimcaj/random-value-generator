@@ -27,7 +27,7 @@
 
 "use strict";
 
-const url = require("url");
+const URL = require("url").URL;
 
 function unboxIfBoxed(object) {
     if (object instanceof Number || object instanceof Boolean || object instanceof String) {
@@ -37,8 +37,12 @@ function unboxIfBoxed(object) {
 }
 
 function urlToOptions(whatwgURL) {
-    if (!(whatwgURL instanceof url.URL)) {
+    whatwgURL = unboxIfBoxed(whatwgURL);
+    if (!(typeof whatwgURL === "string" || whatwgURL instanceof URL)) {
         throw new TypeError("Incorrect type for urlToOptions argument!");
+    }
+    if (typeof whatwgURL === "string") {
+        whatwgURL = new URL(whatwgURL);
     }
     const hostname = whatwgURL.hostname;
     const options = {
