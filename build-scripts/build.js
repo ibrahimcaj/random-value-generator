@@ -34,7 +34,10 @@ const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const url = require("url");
-const {unboxIfBoxed} = require("./utilities.js");
+const {
+    unboxIfBoxed,
+    urlToOptions
+} = require("./utilities.js");
 
 const FORCE = process.argv.some(arg => arg === "-f" || arg === "--force");
 const PROJECT_ROOT = path.resolve(process.argv[1], "../..");
@@ -80,7 +83,7 @@ async function generate(filePath, generateFunction, force) {
         return console.log(`${filePath} already exists, no new file is generated.\nUse flag "-f" or "--force" to force regeneration.`);
     }
     try {
-        fs.writeFileSync(filePath, await generateFunction(), "utf8");
+        fs.writeFileSync(filePath, await generateFunction());
     } catch (error) {
         console.error(`Unable to write to ${filePath}!`);
         throw error;
@@ -157,10 +160,10 @@ function downloadEmojiFile(filePath) {
     const splits = filePath.split(path.sep);
     const downloadURL = `https://www.unicode.org/Public/emoji/12.0/${splits[splits.length - 1]}`;
     return new Promise(resolve => {
-        const request = https.get(downloadURL, {
+        const request = https.get(Object.assign(urlToOptions(downloadURL), {
             headers: {"Accept": "text/plain"},
             timeout: 10000
-        }, response => {
+        }), response => {
             const statusCode = response.statusCode;
             if (statusCode !== 200) {
                 response.removeAllListeners("end");
