@@ -74,4 +74,4 @@ Other changes:
 
 ## 0.0.1
 
-Initial release: Added function `randomNumber(max)`, `randomInteger(max)`, `randomBoolean()`, `randomString(max)`, and `randomHash(max)`
+Initial release: Added function `randomNumber(len)`, `randomInteger(len)`, `randomBoolean()`, `randomString(len)`, and `randomHash(len)`
