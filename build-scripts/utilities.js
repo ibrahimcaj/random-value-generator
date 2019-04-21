@@ -27,6 +27,8 @@
 
 "use strict";
 
+const url = require("url");
+
 function unboxIfBoxed(object) {
     if (object instanceof Number || object instanceof Boolean || object instanceof String) {
         return object.valueOf();
@@ -34,6 +36,33 @@ function unboxIfBoxed(object) {
     return object;
 }
 
+function urlToOptions(whatwgURL) {
+    if (!(whatwgURL instanceof url.URL)) {
+        throw new TypeError("Incorrect type for urlToOptions argument!");
+    }
+    const hostname = whatwgURL.hostname;
+    const options = {
+        protocol: whatwgURL.protocol,
+        hostname: typeof hostname === "string" && hostname.startsWith("[") ? hostname.slice(1, -1) : hostname,
+        hash: whatwgURL.hash,
+        search: whatwgURL.search,
+        pathname: whatwgURL.pathname,
+        path: `${whatwgURL.pathname || ""}${whatwgURL.search || ""}`,
+        href: whatwgURL.href
+    };
+    const port = whatwgURL.port;
+    if (port !== "") {
+        options.port = Number(port);
+    }
+    const username = whatwgURL.username;
+    const password = whatwgURL.password;
+    if (username || password) {
+        options.auth = `${username}:${password}`;
+    }
+    return options;
+}
+
 module.exports = {
-    unboxIfBoxed
+    unboxIfBoxed,
+    urlToOptions
 };
