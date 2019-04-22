@@ -4,7 +4,7 @@
 
 * Generated `browser.js` for use in websites
 * Generated `emoji-code-points.json` used by `randomEmoji()` as a list of emojis to pick from
-* Updated the list of emojis, which now contains 3907 emojis (2263 more than in previous version)
+* Updated the list of emojis, which now contains 3019 emojis (1375 more than in previous version)
 * Added stricter type checking for function `randomNumber(max)`, `randomInteger(max)`, `randomString(len)`, and `randomHash(len)`
 * Added default `max` for `randomNumber(max)` to be `1`
 * Added default `max` for `randomInteger(max)` to be `2`
