@@ -137,9 +137,7 @@ async function getCodePoints() {
         return codePoints;
     }
     const filePaths = [
-        path.resolve(PROJECT_ROOT, "./build-scripts/emoji-data.txt"),
-        path.resolve(PROJECT_ROOT, "./build-scripts/emoji-sequences.txt"),
-        path.resolve(PROJECT_ROOT, "./build-scripts/emoji-zwj-sequences.txt")
+        path.resolve(PROJECT_ROOT, "./build-scripts/emoji-test.txt")
     ];
     for (const filePath of filePaths.filter(filePath => !fs.existsSync(filePath))) {
         await downloadEmojiFile(filePath);
