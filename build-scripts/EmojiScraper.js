@@ -32,6 +32,8 @@
  * Files applicable for scraping:
  * https://www.unicode.org/Public/emoji/12.0/emoji-data.txt
  * https://www.unicode.org/Public/emoji/12.0/emoji-sequences.txt
+ * https://www.unicode.org/Public/emoji/12.0/emoji-test.txt
+ * https://www.unicode.org/Public/emoji/12.0/emoji-variation-sequences.txt
  * https://www.unicode.org/Public/emoji/12.0/emoji-zwj-sequences.txt
  */
 
@@ -85,7 +87,14 @@ class EmojiScraper {
             return codePointsSet;
         }
 
-        const regexDefaultExclusions = "(zero\\swidth\\sjoiner)|(VARIATION\\sSELECTOR-16)|(tag\\sspace..cancel\\stag)";
+        const regexDefaultExclusions = [
+            "zero width joiner",
+            "VARIATION SELECTOR-16",
+            "tag space..cancel tag",
+            "text style",
+            "minimally-qualified",
+            "unqualified"
+        ].map(pattern => `(${pattern.replace(/\s/gi, "\\s")})`).join("|");
 
         this.getFilteredLines().forEach(line => {
 
