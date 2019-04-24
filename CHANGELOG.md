@@ -2,8 +2,7 @@
 
 ## 0.2.0
 
-* Generated `browser.js` for use in websites
-* Generated `emoji-code-points.json` used by `randomEmoji()` as a list of emojis to pick from
+* Generated a list of emoji code points used by `randomEmoji()`
 * Updated the list of emojis, which now contains 3019 emojis (1375 more than in previous version)
 * Added stricter type checking for function `randomNumber(max)`, `randomInteger(max)`, `randomString(len)`, and `randomHash(len)`
 * Added default `max` for `randomNumber(max)` to be `1`
@@ -15,7 +14,7 @@
 * Added default `len` for `randomHash(len)` to be `1`
 * Fixed an issue where `randomHash(len)` always returns a zero-length string, now it returns a string containing `A-Z`, `a-z`, and `0-9` as long as `len` is not `0`
 * Made function `randomNumber(max)`, `randomInteger(max)`, `randomString(len)`, and `randomHash(len)` accept boxed/wrapper type parameters
-* Generated `index.js`
+* Generated `index.js` usable in both Node.js environment and in websites
 * Generated `index.mjs` for use in projects using ES Modules
 * Removed dependency `randomatic` and `uuid`
 
