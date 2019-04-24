@@ -56,17 +56,13 @@ const ReplacePattern = {
 };
 
 const TargetFile = {
-    NODE: path.resolve(PROJECT_ROOT, "./index.js"),
-    BROWSER: path.resolve(PROJECT_ROOT, "./browser.js"),
-    MJS: path.resolve(PROJECT_ROOT, "./index.mjs"),
-    EMOJI: path.resolve(PROJECT_ROOT, "./emoji-code-points.json")
+    JS: path.resolve(PROJECT_ROOT, "./index.js"),
+    MJS: path.resolve(PROJECT_ROOT, "./index.mjs")
 };
 
 const commands = [
-    new Command(force => generate(TargetFile.NODE, generateNode, force), "n", "node", "commonjs-module"),
-    new Command(force => generate(TargetFile.BROWSER, generateBrowser, force), "b", "browser"),
-    new Command(force => generate(TargetFile.MJS, generateMjs, force), "m", "mjs", "es-module"),
-    new Command(force => generate(TargetFile.EMOJI, generateEmoji, force), "e", "emoji", "emojis", "code-point", "code-points")
+    new Command(force => generate(TargetFile.JS, generateJs, force), "j", "js", "n", "node", "commonjs-module", "b", "browser"),
+    new Command(force => generate(TargetFile.MJS, generateMjs, force), "m", "mjs", "es-module")
 ];
 
 if (!CommandList.getCommandList(...commands).runCommands(process.argv, FORCE)) {
@@ -83,40 +79,23 @@ async function generate(filePath, generateFunction, force) {
         return console.log(`${filePath} already exists, no new file is generated.\nUse flag "-f" or "--force" to force regeneration.`);
     }
     try {
-        fs.writeFileSync(filePath, await generateFunction());
+        fs.writeFileSync(filePath, `${await generateFunction()}\n/* Generated time: ${new Date().toUTCString()} */\n`);
     } catch (error) {
         console.error(`Unable to write to ${filePath}!`);
         throw error;
     }
 }
 
-function generateNode() {
-    return `${getBase()
-        .replace(ReplacePattern.CODE_POINTS, "const codePoints = require(\"./emoji-code-points.json\").codePoints;")
-        .replace(ReplacePattern.EXPORTS, `module.exports = ${EXPORTS_STRING};`)}${getTimeAppendix()}`;
-}
-
-async function generateBrowser() {
+function generateJs() {
     return `${getBase()
         .replace(ReplacePattern.CODE_POINTS, `const codePoints = [${(await getCodePoints()).map(element => `\"${element}\"`)}];`)
-        .replace(ReplacePattern.EXPORTS, "")}${getTimeAppendix()}`;
+        .replace(ReplacePattern.EXPORTS, `typeof module === "undefined" ? undefined : module.exports = ${EXPORTS_STRING};`)}`;
 }
 
 async function generateMjs() {
     return `${getBase()
         .replace(ReplacePattern.CODE_POINTS, `const codePoints = [${(await getCodePoints()).map(element => `\"${element}\"`)}];`)
-        .replace(ReplacePattern.EXPORTS, `export default ${EXPORTS_STRING};`)}${getTimeAppendix()}`;
-}
-
-async function generateEmoji() {
-    const codePoints = await getCodePoints();
-    return `${JSON.stringify({
-            metadata: {
-                totalElements: codePoints.length,
-                generationTimestamp: new Date().toUTCString()
-            },
-            codePoints: codePoints
-        }, undefined, 4)}\n`;
+        .replace(ReplacePattern.EXPORTS, `export default ${EXPORTS_STRING};`)}`;
 }
 
 function getBase() {
@@ -136,18 +115,12 @@ async function getCodePoints() {
     if (codePoints) {
         return codePoints;
     }
-    const filePaths = [
-        path.resolve(PROJECT_ROOT, "./build-scripts/emoji-test.txt")
-    ];
-    for (const filePath of filePaths.filter(filePath => !fs.existsSync(filePath))) {
+    const filePath = path.resolve(PROJECT_ROOT, "./build-scripts/emoji-test.txt");
+    if (!fs.existsSync(filePath)) {
         await downloadEmojiFile(filePath);
     }
-    codePoints = Array.from(new EmojiScraper(...filePaths).scrape());
+    codePoints = Array.from(new EmojiScraper(filePath).scrape());
     return codePoints;
-}
-
-function getTimeAppendix() {
-    return `\n/* Generated time: ${new Date().toUTCString()} */\n`;
 }
 
 function downloadEmojiFile(filePath) {
