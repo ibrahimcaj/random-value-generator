@@ -86,7 +86,7 @@ async function generate(filePath, generateFunction, force) {
     }
 }
 
-function generateJs() {
+async function generateJs() {
     return `${getBase()
         .replace(ReplacePattern.CODE_POINTS, `const codePoints = [${(await getCodePoints()).map(element => `\"${element}\"`)}];`)
         .replace(ReplacePattern.EXPORTS, `typeof module === "undefined" ? undefined : module.exports = ${EXPORTS_STRING};`)}`;
