@@ -255,4 +255,4 @@ export default {
   randomEmoji
 };
 
-/* Generated time: Mon, 22 Apr 2019 09:17:51 GMT */
+/* Generated time: Wed, 24 Apr 2019 03:04:15 GMT */
