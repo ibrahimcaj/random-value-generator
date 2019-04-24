@@ -255,4 +255,4 @@ typeof module === "undefined" ? undefined : module.exports = {
   randomEmoji
 };
 
-/* Generated time: Wed, 24 Apr 2019 03:04:14 GMT */
+/* Generated time: Wed, 24 Apr 2019 06:47:07 GMT */
