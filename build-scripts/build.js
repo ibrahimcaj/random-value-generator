@@ -43,17 +43,13 @@ const FORCE = process.argv.some(arg => arg === "-f" || arg === "--force");
 const PROJECT_ROOT = path.resolve(process.argv[1], "../..");
 const SOURCE_FILE = path.resolve(PROJECT_ROOT, "./base.js");
 const SOURCE_FILE_INDENT = " ".repeat(2);
+const EXPORTS_REPLACE_PATTERN = "/* Exports insertion */";
 const EXPORTS_STRING = `{\n${SOURCE_FILE_INDENT}${
     ["randomNumber", "randomInteger", "randomBoolean", "randomString", "randomHash", "randomEmoji"].join(`,\n${SOURCE_FILE_INDENT}`)
 }\n}`;
 
 let baseCache;
 let codePoints;
-
-const ReplacePattern = {
-    CODE_POINTS: "/* Code points insertion */",
-    EXPORTS: "/* Exports insertion */"
-};
 
 const TargetFile = {
     JS: path.resolve(PROJECT_ROOT, "./index.js"),
@@ -86,16 +82,14 @@ async function generate(filePath, generateFunction, force) {
     }
 }
 
-async function generateJs() {
-    return `${getBase()
-        .replace(ReplacePattern.CODE_POINTS, `const codePoints = [${(await getCodePoints()).map(element => `\"${element}\"`)}];`)
-        .replace(ReplacePattern.EXPORTS, `typeof module === "undefined" ? undefined : module.exports = ${EXPORTS_STRING};`)}`;
+function generateJs() {
+    return replaceCodePoints(getBase()).then(string => string.replace(EXPORTS_REPLACE_PATTERN,
+            `typeof module === "undefined" ? undefined : module.exports = ${EXPORTS_STRING};`));
 }
 
-async function generateMjs() {
-    return `${getBase()
-        .replace(ReplacePattern.CODE_POINTS, `const codePoints = [${(await getCodePoints()).map(element => `\"${element}\"`)}];`)
-        .replace(ReplacePattern.EXPORTS, `export default ${EXPORTS_STRING};`)}`;
+function generateMjs() {
+    return replaceCodePoints(getBase()).then(string =>
+        string.replace(EXPORTS_REPLACE_PATTERN, `export default ${EXPORTS_STRING};`));
 }
 
 function getBase() {
@@ -109,6 +103,15 @@ function getBase() {
         console.error(`Unable to read from ${SOURCE_FILE}!`);
         throw error;
     }
+}
+
+async function replaceCodePoints(string) {
+    string = unboxIfBoxed(string);
+    if (typeof string !== "string") {
+        throw new TypeError("Incorrect type for replaceCodePoints argument!");
+    }
+    return string.replace("/* Code points insertion */",
+        `const codePoints = [${(await getCodePoints()).map(element => `\"${element}\"`)}];`);
 }
 
 async function getCodePoints() {
@@ -126,7 +129,7 @@ async function getCodePoints() {
 function downloadEmojiFile(filePath) {
     filePath = filePath instanceof url.URL ? url.format(filePath, {unicode: true}) : unboxIfBoxed(filePath);
     if (typeof filePath !== "string") {
-        throw new TypeError("Incorrect type for downloadEmojiFile arguments!");
+        throw new TypeError("Incorrect type for downloadEmojiFile argument!");
     }
     const splits = filePath.split(path.sep);
     const downloadURL = `https://www.unicode.org/Public/emoji/12.0/${splits[splits.length - 1]}`;
