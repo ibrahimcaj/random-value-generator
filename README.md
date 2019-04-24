@@ -31,7 +31,7 @@ Please note that `max` is the maximum value of the returned number, and `len` is
 
 Loading the script:
 ```
-<script src="http://unpkg.com/random-value-generator/browser.js"></script>
+<script src="http://unpkg.com/random-value-generator/index.js"></script>
 ```
 
 Alternatively, script utilizing ES Module can be used:
