@@ -246,7 +246,7 @@ function unboxIfBoxed(object) {
  * @property {function} randomEmoji {@link randomEmoji}
  * @readonly
  */
-typeof module === "undefined" ? undefined : module.exports = {
+export default {
   randomNumber,
   randomInteger,
   randomBoolean,

@@ -1,22 +1,46 @@
 {
   "name": "random-value-generator",
-  "version": "0.1.2",
-  "description": "A simple and small repository that can generate random values.",
-  "main": "index.js",
-  "scripts": {
-    "test": "node index.js"
-  },
-  "author": "vanishedvan",
+  "version": "0.2.0",
+  "description": "A simple, zero-dependency package that can generate random values.",
   "keywords": [
     "random",
     "value",
     "generator",
     "generation"
   ],
-  "repository": "https://github.com/vanishedvan/random-value-generator",
+  "homepage": "https://github.com/vanishedvan/random-value-generator",
+  "bugs": {
+    "url": "https://github.com/vanishedvan/random-value-generator/issues"
+  },
   "license": "MIT",
-  "dependencies": {
-    "randomatic": "^3.1.1",
-    "uuid": "^3.3.2"
+  "author": {
+    "name": "vanishedvan",
+    "url": "https://github.com/vanishedvan"
+  },
+  "contributors": [
+    {
+      "name": "LightWayUp",
+      "email": "lightwayuplightwayup@gmail.com",
+      "url": "https://lightwayup.github.io/"
+    }
+  ],
+  "main": "index.js",
+  "browser": "index.js",
+  "directories": {
+    "test": "./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vanishedvan/random-value-generator.git"
+  },
+  "scripts": {
+    "pretest": "npm run build -- -f",
+    "test": "node --throw-deprecation test/test.js",
+    "build": "node --throw-deprecation build-scripts/build.js",
+    "generate-js": "npm run build -- -j",
+    "generate-mjs": "npm run build -- -m"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }

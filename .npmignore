@@ -1,0 +1,15 @@
+# Tests
+test/
+
+# Base source file
+base.js
+
+# Package build scripts
+build-scripts/
+
+# Travis configuration
+.travis.yml
+
+# Documentation
+API_DOCS.md
+BUILD_INSTRUCTIONS.md
