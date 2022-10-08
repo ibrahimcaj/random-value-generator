@@ -1,4 +1,4 @@
-# [random-value-generator][NPM Package]
+# ⚠️ [random-value-generator][NPM Package] (archived)
 
 ## Badges
 
